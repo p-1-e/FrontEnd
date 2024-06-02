@@ -81,7 +81,7 @@ body{
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.buttons-notes{
+.button-notes{
     border-radius: 20px;
     position: absolute;
     top: 300px;
@@ -284,4 +284,34 @@ body{
     top: 390px;
     left: 870px;
     text-align: center; 
+}
+
+.instructions-note{
+    background-color: white;
+    width: 260px;
+    height: 140px;
+    position: relative;
+    top: 250px;
+    left: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 30px;
+}
+
+.note-name{
+    position: absolute;
+    text-align: center;
+    height: 30px;
+    width: 300px;
+    top: 180px;
+    left: 750px;
+}
+
+.note{
+    position: absolute;
+    text-align: center;
+    height: 280px;
+    width: 300px;
+    top: 220px;
+    left: 750px;
 }
