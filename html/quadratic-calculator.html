@@ -37,11 +37,11 @@
         <h1>X+</h1>
     </div>
 
-    <input type="text" id="nombre" name="quadratic" class="quadratic" value="0">
+    <input type="number" id="a" name="quadratic" class="quadratic" value="0">
     
-    <input type="text" id="nombre" name="lineal" class="lineal" value="0">
+    <input type="number" id="b" name="lineal" class="lineal" value="0">
     
-    <input type="text" id="nombre" name="independient" class="independient" value="0">
+    <input type="number" id="c" name="independient" class="independient" value="0">
 
     <div class="calculate-botton">
         <input type="button" value="Calculate">
@@ -51,9 +51,8 @@
         <p>The solutions to the quadratic equation are:</p>
     </div>
 
-    <input type="text" id="nombre" name="answer1" class="answer1" value="0" readonly>
-
-    <input type="text" id="nombre" name="answer2" class="answer2" value="0" readonly>
+    <p id="roots"></p>
+    <script src="/js/quadraticEquation.js"></script>
 
 </body>
 </html>

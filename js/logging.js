@@ -4,37 +4,41 @@ let backButton = document.getElementById("back-button");
 backButton.addEventListener("click", back)
 
 function back() {
-    window.location.href = "/Html/index.html"
+    window.location.href = "../html/index.html"
 }
 
 
 // logging request 
 
 let loggingButton = document.getElementById("logging-button"); 
-loggingButton.addEventListener("click", loggingRequest); 
+loggingButton.addEventListener("click", fetchLogin);
 
-
-async function loggingRequest() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;  
-
-    let httpRequest = new XMLHttpRequest();
-    let url = await  fetch("http://localhost:8080/login?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}");
-    httpRequest.open("POST", url);
-
-    httpRequest.onreadystatechange = function () {
-        if (httpRequest.readyState === 4) {
-            if (httpRequest.status === 200) {
-                goToHome();
-            } else {
-                console.log("you are not register")
-            }
-        }
-    }
-    httpRequest.send(); 
-}
 
 function goToHome() {
-    window.location.href = "/Html/home.index"
+    window.location.href = "../html/home.html"
 }
 
+
+function fetchLogin() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value; 
+
+    const url = `http://localhost:8080/login?username=${username}&password=${password}`
+    console.log(url);
+    const options = {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json'
+        }
+    }
+    fetch(url, options).then(async response => {
+        if (!response.ok) {
+            console.log('you are not logged in ', response);
+        } else {
+            const user = JSON.stringify(response.json().toString());
+            sessionStorage.setItem("user", user);
+            console.log(sessionStorage.getItem("user"));
+            goToHome();
+        }
+    });
+}
