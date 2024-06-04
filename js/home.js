@@ -1,3 +1,18 @@
+const user = JSON.parse(sessionStorage.getItem("user"));
+if (user){
+    console.log(user);
+    console.log(user['userName']);
+    const usernameContainer = document.getElementById('username-container');
+    usernameContainer.textContent = `Hello ${user['userName']}!`;
+}
+
+const logoutButton = document.getElementById('logout-button');
+logoutButton.addEventListener('click', function () {
+    sessionStorage.removeItem('user');
+    window.location.href = '/html/index.html';
+})
+
+
 const quadraticButton = document.getElementById('quadratic-button');
 quadraticButton.addEventListener('click', gotoQuadraticCalculator);
 
