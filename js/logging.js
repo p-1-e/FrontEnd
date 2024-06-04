@@ -31,14 +31,15 @@ function fetchLogin() {
             'Accept': 'application/json'
         }
     }
-    fetch(url, options).then(async response => {
-        if (!response.ok) {
-            console.log('you are not logged in ', response);
+    fetch(url, options).then(res => {
+        if (!res.ok) {
+            console.log('you are not logged in ', res);
+            gotoInvalidRegister();
         } else {
-            const user = JSON.stringify(response.json().toString());
-            sessionStorage.setItem("user", user);
-            console.log(sessionStorage.getItem("user"));
-            goToHome();
+            res.json().then(user => {
+                sessionStorage.setItem('user', JSON.stringify(user));
+                goToHome()
+            })
         }
     });
 }

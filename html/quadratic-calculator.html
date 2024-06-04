@@ -15,11 +15,11 @@
         <p>To use the quadratic calculator, please enter the values ​​of the independent terms and then press the "calculate" button.</p>
     </div>
     
-    <div class="button-log-out" role="group" aria-label="First group">
+    <div class="button-log-out" id="logout-button" role="group" aria-label="First group">
         <input type="button" value="Log out">
     </div>
     
-    <div class="button-back">
+    <div class="button-back" id="back-button">
         <input type="button" value="Back">
     </div>
 
@@ -29,7 +29,7 @@
 
     <div class="username"></div>
     
-    <div class="calculator-text-quadretic">
+    <div class="calculator-text-quadratic">
         <h1>X^2+</h1>
     </div>
     
@@ -41,18 +41,19 @@
     
     <input type="number" id="b" name="lineal" class="lineal" value="0">
     
-    <input type="number" id="c" name="independient" class="independient" value="0">
+    <input type="number" id="c" name="independent" class="independent" value="0">
 
-    <div class="calculate-botton">
+    <div class="calculate-button" id="calculate-button">
         <input type="button" value="Calculate">
     </div>
     
     <div class="answer">
         <p>The solutions to the quadratic equation are:</p>
+        <p id="roots"></p>
+        <script src="/js/quadraticEquation.js"></script>
     </div>
 
-    <p id="roots"></p>
-    <script src="/js/quadraticEquation.js"></script>
+
 
 </body>
 </html>

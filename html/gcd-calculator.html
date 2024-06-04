@@ -15,11 +15,11 @@
         <p>To use the GCD calculator, please enter both values and then press the "calculate" button.</p>
     </div>
     
-    <div class="button-log-out" role="group" aria-label="First group">
+    <div class="button-log-out" id ="logout-button" role="group" aria-label="First group">
         <input type="button" value="Log out">
     </div>
     
-    <div class="button-back">
+    <div class="button-back" id="back-button">
         <input type="button" value="Back">
     </div>
 
@@ -33,17 +33,17 @@
 
     <div class="b"><h1>B=</h1></div>
 
-    <input type="text" id="nombre" name="a-value" class="a-value" value="0">
+    <input type="text" id="a" name="a-value" class="a-value" value="0">
 
-    <input type="text" id="nombre" name="b-value" class="b-value" value="0">
+    <input type="text" id="b" name="b-value" class="b-value" value="0">
 
     <div class="answer-gcd"><p>The GCD of the entered values is</p></div>
 
-    <input type="text" id="nombre" name="answer-gcd" class="answer-gcd-number" value="0" readonly>
+    <input type="text" id="result" name="answer-gcd" class="answer-gcd-number" value="0" readonly>
 
-    <div class="calculate-botton">
+    <div class="calculate-button" id="calculate-button">
         <input type="button" value="Calculate">
     </div>
-
+    <script src ="/js/gcdCalculator.js"></script>
 </body>
 </html>
