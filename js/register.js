@@ -26,7 +26,9 @@ function register() {
     console.log(user);
     fetch(url, options).then(response => {
         if (!response.ok) {
-            console.log('you was not registered', response);
+            console.log(response);
+            window.alert('you was not registered');
+
             gotoInvalidRegister();
         } else {
             console.log(response);
