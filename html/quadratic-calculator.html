@@ -5,55 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quadratic calculator</title>
     <link rel="icon" href="/Images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/Css/style.css">
 </head>
 <body>
-    <div class="background"></div>
+<div class="background">
+    <div class="glass" id="glass-notes">
+        <div>
+            <div class="quadratic-equation">
+                <input type="number" id="a" name="quadratic" class="number-equation" value="0">
+                <p class="text-equation">x<sup>2</sup> +</p>
+                <input type="number" id="b" name="lineal" class="number-equation" value="0">
+                <p class="text-equation"> x +</p>
+                <input type="number" id="c" name="independent" class="number-equation" value="0">
+            </div>
 
-    <div class="instructions-quadratic">
-        <p>To use the quadratic calculator, please enter the values ​​of the independent terms and then press the "calculate" button.</p>
+            <button class="primary-button" id="calculate-button">
+                Calculate
+            </button>
+
+            <div class="answer">
+                <p>The solutions to the quadratic equation are:</p>
+                <p id="roots"></p>
+            </div>
+        </div>
     </div>
-    
-    <div class="button-log-out" id="logout-button" role="group" aria-label="First group">
-        <input type="button" value="Log out">
-    </div>
-    
-    <div class="button-back" id="back-button">
-        <input type="button" value="Back">
-    </div>
+</div>
 
-    <div class="glass"></div>
+<div class="instructions-quadratic">
+    <p>To use the quadratic calculator, please enter the values ​​of the independent terms and then press the
+        "calculate" button.</p>
+</div>
 
-    <div class="logo"></div>
-
-    <div class="username"></div>
-    
-    <div class="calculator-text-quadratic">
-        <h1>X^2+</h1>
-    </div>
-    
-    <div class="calculator-text-lineal">
-        <h1>X+</h1>
-    </div>
-
-    <input type="number" id="a" name="quadratic" class="quadratic" value="0">
-    
-    <input type="number" id="b" name="lineal" class="lineal" value="0">
-    
-    <input type="number" id="c" name="independent" class="independent" value="0">
-
-    <div class="calculate-button" id="calculate-button">
-        <input type="button" value="Calculate">
-    </div>
-    
-    <div class="answer">
-        <p>The solutions to the quadratic equation are:</p>
-        <p id="roots"></p>
-        <script src="/js/quadraticEquation.js"></script>
-    </div>
+<div class="navigation-button-container">
+    <button class="primary-button" id="back-btn">
+        Back
+    </button>
+    <button class="danger-button" id="logout-btn">
+        Logout
+    </button>
+</div>
 
 
+
+<div class="logo"></div>
+
+<div class="username"></div>
+
+<script src="/js/quadraticEquation.js"></script>
 
 </body>
 </html>

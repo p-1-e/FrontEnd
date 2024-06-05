@@ -38,8 +38,13 @@ function fetchLogin() {
         } else {
             res.json().then(user => {
                 sessionStorage.setItem('user', JSON.stringify(user));
-                goToHome()
+                gotoHome()
             })
         }
     });
+}
+
+function gotoHome(){
+    sessionStorage.removeItem('note');
+    window.location.href = "../html/home.html";
 }

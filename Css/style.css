@@ -1,25 +1,28 @@
 body {
     background-color: beige;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    align-content: center;
 }
 
 .background {
     border-radius: 20px;
+    width: 60%;
+    height: 60%;
     background-image: url(/Images/nino.jpg);
     position: absolute;
-    background-size: 1000px 500px;
+    align-content: center;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 500px;
-    position: absolute;
     top: 12%;
     left: 23%;
-
 }
 
 .about-us {
     background-color: white;
     width: 260px;
     height: 300px;
+    border-radius: 15px;
     position: relative;
     top: 190px;
     left: 25px;
@@ -56,24 +59,44 @@ body {
     left: 95px;
 }
 
+.primary-button {
+    background-color: #a0d3fb;
+    color: black;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+
+}
+
+#container-notes-buttons {
+    position: absolute;
+    right: 20px;
+    bottom: 20px
+}
+
+#button-calculator-container {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
 .error-message {
     color: red;
 }
 
 .button-log-out {
-    position: absolute;
-    top: 25px;
-    left: 1234px;
-    width: 20px;
-    height: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #b30000;
+    color: white;
 }
 
 .glass {
-    position: absolute;
-    top: 130px;
-    left: 700px;
-    width: 400px;
-    height: 400px;
+    align-content: initial;
+    width: 55%;
+    height: 90%;
+    margin: auto;
     background: linear-gradient(13deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -83,12 +106,22 @@ body {
 }
 
 .button-notes {
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    background-color: #a0d3fb;
+    color: black;
     border-radius: 20px;
     position: absolute;
-    top: 300px;
-    left: 430px;
-    width: 20px;
-    height: 20px;
+    padding: 10px;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.logo-container {
+    position: absolute;
+    top: 50px;
+    left: 50px;
 }
 
 .calculator-image {
@@ -118,59 +151,74 @@ body {
     left: 85px;
 }
 
+#username-text {
+    padding: 10px;
+}
+
 .username {
     position: absolute;
     top: 180px;
     left: 100px;
     width: 110px;
-    height: 30px;
+    border-radius: 10px;
+    height: fit-content;
     border-color: black;
     background-color: bisque;
     text-align: center;
 }
 
 .quadratic {
-    position: absolute;
-    width: 50px;
-    height: 35px;
-    top: 188px;
-    left: 740px;
     text-align: center;
 }
 
-.lineal {
+.navigation-button-container {
     position: absolute;
-    width: 50px;
-    height: 35px;
-    top: 188px;
-    left: 905px;
-    text-align: center;
+    top: 20px;
+    right: 20px;
 }
 
-.independent {
-    position: absolute;
-    width: 50px;
-    height: 35px;
-    top: 188px;
-    left: 1013px;
+
+.text-equation {
     text-align: center;
+    font-size: 32px;
+    font-family: Inter, serif;
+    font-weight: bold;
+    color: black;
+    margin: 8px
 }
 
-.calculator-text-quadratic {
-    position: absolute;
-    top: 180px;
-    left: 800px;
-    width: 30px;
-    height: 20px;
-    text-align: center;
+.number-equation {
+    font-size: 28px;
+    font-family: Inter, serif;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    background: none;
+}
+
+li {
+    background-color: #dadada;
+    align-content: flex-start;
+    padding: 8px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 8px;
+    list-style-type: none;
+}
+
+.title {
+    width: max-content;
+    align-content: baseline;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.mcd-input-container {
+    display: flex;
 }
 
 .calculator-text-lineal {
-    position: absolute;
-    top: 180px;
-    left: 960px;
-    width: 30px;
-    height: 20px;
+
     text-align: center;
 }
 
@@ -179,11 +227,34 @@ body {
     top: 300px;
     left: 460px;
 }
+#result {
+    padding: 10px;
+    width: 60px;
+    height: 50px;
+    background: white;
+    color: black;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border:none;
 
-.answer {
-    position: absolute;
-    top: 300px;
-    left: 750px;
+}
+
+.quadratic-equation {
+    background-color: white;
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 50px;
+}
+
+.input-label {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .answer1 {
@@ -206,14 +277,15 @@ body {
 
 .instructions-quadratic {
     background-color: white;
-    width: 260px;
-    height: 240px;
+    border-radius: 20px;
+    width: 300px;
+    height: fit-content;
+    padding: 30px;
     position: relative;
     top: 250px;
     left: 25px;
     text-align: center;
     letter-spacing: 2px;
-    padding: 30px;
 }
 
 .button-back {
@@ -299,20 +371,47 @@ body {
     padding: 30px;
 }
 
-.note-name {
-    position: absolute;
-    text-align: center;
-    height: 30px;
-    width: 300px;
-    top: 180px;
-    left: 750px;
+
+#glass-notes {
+    display: flex;
+    align-content: center;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+#glass-notes > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .note {
-    position: absolute;
+    position: relative;
     text-align: center;
-    height: 280px;
-    width: 300px;
-    top: 220px;
-    left: 750px;
+    margin: auto;
+    border-radius: 5px;
+
+    padding: 5px;
+    height: 80%;
+    width: 80%;
 }
+
+.note-name {
+    border-radius: 5px;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.danger-button {
+    background-color: #a82a2a;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+}
+

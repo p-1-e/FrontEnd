@@ -5,45 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GCD calculator</title>
     <link rel="icon" href="/Images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/Css/style.css">
 </head>
 <body>
-    <div class="background"></div>
+<div class="background">
 
-    <div class="instructions-gcd">
-        <p>To use the GCD calculator, please enter both values and then press the "calculate" button.</p>
+    <div class="glass" id="glass-notes">
+        <div>
+            <div>
+                <div class="quadratic-equation">
+
+                    <p class="text-equation">A=</p>
+                    <input type="text" id="a" name="a" class="number-equation" value="0">
+                    <br>
+                    <p class="text-equation">B=</p>
+                    <input type="text" id="b" name="b" class="number-equation" value="0">
+                </div>
+                <br>
+            </div>
+            <div><p>The GCD of the entered values is</p></div>
+
+
+            <p id="result"></p>
+
+        </div>
+
     </div>
-    
-    <div class="button-log-out" id ="logout-button" role="group" aria-label="First group">
-        <input type="button" value="Log out">
-    </div>
-    
-    <div class="button-back" id="back-button">
-        <input type="button" value="Back">
-    </div>
 
-    <div class="glass"></div>
 
-    <div class="logo"></div>
+</div>
 
-    <div class="username"></div>
-    
-    <div class="a"><h1>A=</h1></div>
+<div class="instructions-gcd">
+    <p>To use the GCD calculator, please enter both values and then press the "calculate" button.</p>
+</div>
+<div class="logo"></div>
 
-    <div class="b"><h1>B=</h1></div>
+<div class="username"></div>
 
-    <input type="text" id="a" name="a-value" class="a-value" value="0">
+<div class="navigation-button-container">
+    <button class="primary-button" id="back-button">
+        Back
+    </button>
+    <button class="danger-button" id="logout-button">
+        Logout
+    </button>
+</div>
 
-    <input type="text" id="b" name="b-value" class="b-value" value="0">
+<div id="container-notes-buttons">
+    <button class="primary-button" id="calculate-button">
+        Calculate
+    </button>
+</div>
 
-    <div class="answer-gcd"><p>The GCD of the entered values is</p></div>
 
-    <input type="text" id="result" name="answer-gcd" class="answer-gcd-number" value="0" readonly>
-
-    <div class="calculate-button" id="calculate-button">
-        <input type="button" value="Calculate">
-    </div>
-    <script src ="/js/gcdCalculator.js"></script>
+<script src="/js/gcdCalculator.js"></script>
 </body>
 </html>

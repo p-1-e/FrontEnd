@@ -28,7 +28,7 @@ function calculateGCD() {
         } else {
             res.json().then(r => {
                 console.log(r);
-                document.getElementById('result').value = r['result'];
+                document.getElementById('result').textContent = r['result'];
             })
         }
     })
