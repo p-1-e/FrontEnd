@@ -5,35 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create a new note</title>
     <link rel="icon" href="/Images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/Css/style.css">
 </head>
 <body>
-    <div class="background"></div>
-    
-    <div class="button-log-out" role="group" aria-label="First group">
-        <input type="button" value="Log out">
-      </div>
-    
-    <div class="glass"></div>
+<div class="background" >
+    <div class="glass" id="glass-notes">
+        <div>
+            <input type="text" placeholder="Note name" class="note-name" id="title">
 
-    <div class="button-notes">
-        <input type="button" value="Save">
+            <textarea class="note" rows="10" cols="50" placeholder="Note" id="text"></textarea>
+
+        </div>
     </div>
+</div>
+<div class="navigation-button-container">
+    <button class="primary-button" id="back-btn">
+        Back
+    </button>
 
-    <div class="logo"></div>
-
-    <div class="instructions-note">
-        <p>Please enter a name and content for the note</p>
-    </div>
-
-
-    <input type="text" placeholder="Note name" class="note-name">
-
-    <textarea class="note"  rows="10" cols="50" placeholder="Note"></textarea>
+    <button class="button-log-out" id="logout-btn">
+        Logout
+    </button>
+</div>
 
 
-    <div class="username"></div>
+<div id="container-notes-buttons">
+    <button class="primary-button" id="save-btn">
+        Save
+    </button>
+</div>
+
+
+<div class="logo"></div>
+
+<div class="instructions-note">
+    <p>Please enter a name and content for the note</p>
+</div>
+
+
+<div class="username"></div>
+
+<script src="/js/newNote.js"></script>
 
 </body>
 </html>

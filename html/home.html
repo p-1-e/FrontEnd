@@ -10,34 +10,46 @@
     <link rel="stylesheet" href="/Css/style.css">
 </head>
 <body>
-<div class="background"></div>
-
-
-<button class="button-log-out" role="group" id="logout-button">
-    Log out
-</button>
-
-<div class="glass"></div>
-
-<div class="button-notes" id="new-note-button">
-    <input type="button" value="Create a new note">
+<div class="navigation-button-container">
+    <button class="button-log-out" id="logout-button">
+        Log out
+    </button>
 </div>
 
-<div class="logo"></div>
+<div class="logo-container">
+    <div class="logo"></div>
 
-<div class="calculator-image"></div>
+    <div class="username">
+        <p id="username-text"></p>
+    </div>
 
-<div class="quadratic-button" id="quadratic-button">
-    <input type="button" value="Quadratic calculator">
+</div>
+<div class="background">
+
+
+    <div class="glass">
+        <p class="title">Notes</p>
+        <ul id="notes-list">
+        </ul>
+
+        <button class="button-notes" id="new-note-button">
+            New Note
+        </button>
+    </div>
+
 </div>
 
-<div class="gcd-button" id="gcd-button">
-    <input type="button" value="GCD calculator">
+<div id="button-calculator-container">
+    <button class="primary-button" id="quadratic-button">
+        Quadratic Calculator
+    </button>
+
+    <button class="primary-button" id="gcd-button">
+        GCD calculator
+    </button>
 </div>
 
-<div class="username" >
-    <p id ="username-container"></p>
-</div>
+
 <script src="/js/home.js"></script>
 </body>
 </html>

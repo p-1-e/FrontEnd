@@ -1,18 +1,18 @@
+document.getElementById('logout-btn').addEventListener('click', logOut)
+
+document.getElementById('back-btn').addEventListener('click', gotoHome)
+
+
 const calculateButton = document.getElementById("calculate-button");
 calculateButton.addEventListener("click", getSolutionQuadraticEquation)
 
-const logoutButton = document.getElementById("logout-button");
-logoutButton.addEventListener("click", logOut)
-
-const backButton = document.getElementById("back-button");
-backButton.addEventListener("click", gotoHome);
 
 function getSolutionQuadraticEquation() {
     let a = document.getElementById("a").value;
     let b = document.getElementById("b").value;
     let c = document.getElementById("c").value;
 
-    const user =(sessionStorage.getItem('user'));
+    const user = sessionStorage.getItem('user');
     console.log(user)
     const url = new URL("http://localhost:8080/quadratic");
     url.searchParams.append("a", a);
