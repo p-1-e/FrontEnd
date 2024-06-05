@@ -3,6 +3,14 @@ body {
     font-family: Inter, sans-serif;
     font-size: 18px;
     align-content: center;
+    height: 100%;
+    margin: 0;
+}
+
+#calculations-container {
+    height: 90%;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .background {
@@ -18,10 +26,12 @@ body {
     left: 23%;
 }
 
+
+
 .about-us {
     background-color: white;
     width: 260px;
-    height: 300px;
+    height: fit-content;
     border-radius: 15px;
     position: relative;
     top: 190px;
@@ -54,9 +64,13 @@ body {
     background-repeat: no-repeat;
     width: 120px;
     height: 120px;
-    position: absolute;
     top: 50px;
     left: 95px;
+}
+
+#image-search{
+    width: 20px;
+    height: 20px;
 }
 
 .primary-button {
@@ -66,6 +80,14 @@ body {
     padding: 10px;
     border: none;
 
+}
+
+.secondary-button {
+    background-color: #acfba0;
+    color: black;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
 }
 
 #container-notes-buttons {
@@ -369,6 +391,30 @@ li {
     text-align: center;
     letter-spacing: 2px;
     padding: 30px;
+}
+
+.parent{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+
+}
+
+
+.instruction-container{
+    margin: auto;
+    background-color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search-input{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    margin: 20px;
 }
 
 

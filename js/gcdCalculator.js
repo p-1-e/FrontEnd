@@ -7,6 +7,7 @@ logoutButton.addEventListener("click", logOut)
 const backButton = document.getElementById("back-button");
 backButton.addEventListener("click", gotoHome);
 
+
 function calculateGCD() {
     const a = document.getElementById('a').value;
     const b = document.getElementById('b').value;

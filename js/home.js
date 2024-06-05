@@ -1,3 +1,7 @@
+document.getElementById('search-button').addEventListener('click', function(){
+    window.location.href = '/html/search-notes.html'
+})
+
 const user = JSON.parse(sessionStorage.getItem("user"));
 if (user){
     console.log(user);
@@ -6,9 +10,12 @@ if (user){
     usernameContainer.textContent = `Hello ${user['userName']}!`;
 }
 
-listNotes()
+const list = document.getElementById('notes-list')
 
-function listNotes(){
+
+listNotes(list)
+
+function listNotes(list){
     const user = JSON.parse(sessionStorage.getItem('user'));
     const url = new URL("http://localhost:8080/notes");
     url.searchParams.append("userID", user['id']);
@@ -26,18 +33,17 @@ function listNotes(){
             console.log(res);
             res.json().then(notes => {
                 console.log(notes);
-                createListNotes(notes);
+                createListNotes(notes, list);
             })
         }
     })
 }
 
-function createListNotes(notes){
-    const listNotes = document.getElementById('notes-list');
+function createListNotes(notes, list){
     notes.forEach(note => {
         const li= document.createElement('li')
         li.textContent = note['title'];
-        listNotes.appendChild(li);
+        list.appendChild(li);
 
         li.addEventListener('click', function (){
             const url = new URL(`http://localhost:8080/notes/${note['id']}`);
@@ -57,7 +63,6 @@ function createListNotes(notes){
                         sessionStorage.setItem('note', JSON.stringify(note));
                         openNote()
                     })
-
                 }
             })
         })
@@ -74,6 +79,7 @@ logoutButton.addEventListener('click', function () {
     window.location.href = '/html/index.html';
 })
 
+// calculators button
 
 const quadraticButton = document.getElementById('quadratic-button');
 quadraticButton.addEventListener('click', gotoQuadraticCalculator);
@@ -84,6 +90,12 @@ GCDButton.addEventListener('click', gotoGCDCalculator);
 const newNoteButton = document.getElementById('new-note-button');
 newNoteButton.addEventListener('click', gotoCreateNewNoteButton);
 
+const  lcmButton = document.getElementById('lcm-button'); 
+lcmButton.addEventListener('click', gotoLCMCalculator)
+
+const historyCalculationsBtn = document.getElementById('history-calculators'); 
+historyCalculationsBtn.addEventListener('click', gotoHistoryCalculations)
+
 function gotoCreateNewNoteButton() {
     window.location.href = "../html/new-note.html";
 }
@@ -92,6 +104,14 @@ function gotoQuadraticCalculator() {
     window.location.href = "../html/quadratic-calculator.html";
 }
 
-function gotoGCDCalculator(){
+function gotoGCDCalculator() {
     window.location.href = "../html/gcd-calculator.html";
+}
+
+function gotoLCMCalculator() {
+    window.location.href = '/html/lcm-calculator.html'
+}
+
+function gotoHistoryCalculations() {
+    window.location.href = '/html/history-calculators.html'
 }
