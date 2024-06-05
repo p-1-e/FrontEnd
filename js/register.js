@@ -30,13 +30,13 @@ function register() {
             gotoInvalidRegister();
         } else {
             console.log(response);
-            gotoHome();
+            gotoLogging();
         }
     })
 }
 
-function gotoHome() {
-    window.location.href = "../html/home.html"
+function gotoLogging() {
+    window.location.href = "../html/logging.html"
 }
 
 function gotoInvalidRegister(){
